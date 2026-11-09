@@ -1,0 +1,21 @@
+# Only trigger when the server is in hardcore mode (hardcore=true in server.properties).
+require-hardcore: true
+
+# Seconds between a death and the reset. 0 = immediately.
+countdown-seconds: 10
+
+# Console command used to restart. "restart" uses Spigot's restart-script (spigot.yml);
+# if no script is configured the server simply stops, which is fine if your host
+# (panel, systemd, a while-loop start script) starts it again automatically.
+restart-command: restart
+
+# Clear level-seed in server.properties so every new world gets a random seed.
+randomize-seed: true
+
+# Colour codes use &. Placeholders: %player% (who died) and %seconds%.
+messages:
+  death: "&c&l%player% died! &7The world resets in &e%seconds%s&7."
+  countdown: "&7World reset in &e%seconds%s&7..."
+  cancelled: "&aWorld reset cancelled."
+  kick: "&c%player% died in hardcore.\n&7The world has been reset - rejoin in a minute!"
+  failed: "&cWorld reset failed - check the server console."

@@ -1,0 +1,15 @@
+name: HardcoreReset
+version: '1.0.0'
+main: dev.hardcorereset.HardcoreReset
+api-version: '26.3'
+description: When anyone dies on a hardcore server, the world is wiped and regenerated.
+commands:
+  hardcorereset:
+    description: Manually start or cancel a hardcore world reset
+    usage: /<command> <reset|cancel>
+    aliases: [hcr]
+    permission: hardcorereset.admin
+permissions:
+  hardcorereset.admin:
+    description: Use /hardcorereset
+    default: op
